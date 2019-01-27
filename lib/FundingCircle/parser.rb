@@ -9,7 +9,7 @@ module FundingCircle
       @options = {}
 
       validate
-    end  
+    end
 
     private
 
@@ -20,15 +20,15 @@ module FundingCircle
 
     def parse
       OptionParser.new do |parser|
-        parser.on("-c", "--count COUNT", Integer, "Generates prime numbers multiplication table upto COUNT") do |v|
+        parser.on('-c', '--count COUNT', Integer, 'Generates prime numbers multiplication table upto COUNT') do |v|
           @options[:count] = v
         end
 
-        parser.on_tail("-h", "--help", "Show help") do 
+        parser.on_tail('-h', '--help', 'Show help') do
           puts parser
           exit
-        end  
-      end.parse! 
+        end
+      end.parse!
     end
-  end   
+  end
 end
